@@ -1,17 +1,15 @@
 # задание 1
-# a = int(input("число a"))
-# b = int(input("число т"))   
 
-# print(a ** b)
 
-# задание 2
+# задание  2
 
-a = int(input("число a"))
-b = int(input("число т"))   
+li = [-5, 9, 0, 3, -1, -2, 1, 4, -2, 10, 2, 0, -9, 8, 10, -9, 0, -5, -5, 7]
+max = int(input())
+min = int(input())
 
-def bab(a, b):
-    if a == 0:
-        return b
-    else:
-        return bab(a - 1, b + 1)
-print(bab(a, b))
+ind = []
+
+for i in range(len(li)):
+    if min <= li >= max:
+        ind.append(i)
+print(li)
