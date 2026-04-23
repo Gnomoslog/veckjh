@@ -37,3 +37,55 @@ pass_quest() — чтобы игрок мог завершить квест.
 
 
 
+import datetime
+
+class Quest:
+    def __init__(self, name, description, goal):
+        self.name = name
+        self.description = description
+        self.goal = goal
+        self.start_time = None
+        self.end_time = None
+        print(f'новое приключение {name} началось!')
+
+    
+    def go(self):
+        if self.end_time is not None:
+            return 'С этот прикол выполнен'
+
+    def description_1(self):
+        self.start_time = datetime.now()
+        return f'Начало {self.name} прикола'
+
+    def goal_ww(self):
+        if self.start_time is not None:
+            return f'Нельзя завершить то, {self.name} что не имеет начала!'
+        
+        self.end_time = datetime.now()
+
+    def os(self):
+        sp = {self.end_time} - {self.start_time}
+        return f'Нел, {self.name}!. GHG {sp}'
+
+    def __str__(self):
+        ba = {self.name} - {self.goal} 
+
+        if self.end_time is not None:
+            return 'С этот прикол выполнен'
+        elif self.start_time is not None:
+            return f'Нельзя завершить то, {self.name} что не имеет начала!'
+        else:
+            return ba
+    
+Pa_quest= "безграничная лужа" 
+Ma_quest= "мне лень объяснять этот квест но у меня есть девочка зайка 😎👌🔥▄︻╦芫≡══--" 
+Star_quest= "_we_shold_pay_rent_alredy_three_mounts_ago_but_we_forgot" 
+
+ma = (Pa_quest, Ma_quest, Star_quest)
+
+print(ma)
+print(ma.go)
+print(ma)
+print(ma.goal_ww)
+print(ma)
+
