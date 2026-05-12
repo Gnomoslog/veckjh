@@ -26,13 +26,13 @@
 #
 # print(apl)
 #
-
+from itertools import count
 
 # задание 2
 
-# a = int(input())
+# n = int(input())
 # c = [int(input()) for i in range(a)]
-# b = int(input())
+# m = int(input())
 # g = [int(input()) for i in range(b)]
 # asd = [x for x in c if x not in g]
 ### asd = set(c) - set(g) - не попорядку типа
@@ -41,18 +41,26 @@
 # задание 3
 # c = int(input())
 # a = list(map(int, input().split()))
-#
 # cot = 0
 # for i in range(1, c - 1):
 #     if a[i] > a[i - 1] and a[i] > a[i + 1]:
 #         cot += 1
-
 # print(cot)
 # задание 4
+# n = int(input("Введи размер массива:"))
+# I = []
+# if n <= 5:
+#     print("")
+# else:
+#     for i in range(n):
+#         v = int(input())
+#         I.append(v)
+# print(I)
 #
-# a = [int(i) for i in input().split()]
-# count = 0
-# for i in range(len(a)):
-#     if a.count(a[i]) >=2:
-#         count+=1
-# print(count)
+# co = 0
+# for h in range(n - 1):
+#     if I[h] == I[h + 1]:
+#         co += 1
+#
+# print(co)
+#
